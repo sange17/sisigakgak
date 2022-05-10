@@ -9,103 +9,74 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/black"
+        android:padding="50px"
         android:orientation="vertical"
         android:gravity="center">
 
-        <TextView
-            android:layout_width="700px"
-            android:layout_height="200px"
-            android:layout_marginBottom="30dp"
-            android:text="시시각각"
-            android:textAlignment="center"
-            android:textColor="#F6821F"
-            android:textSize="150px" />
-
         <Button
-            android:layout_width="700px"
-            android:layout_height="150px"
-            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="300px"
             android:background="@drawable/btn_round"
+            android:layout_marginBottom="50px"
             android:text="진료 예약"
-            android:textColor="#000000"
-            android:textSize="75px"
+            android:textColor="#FFEB3B"
+            android:textSize="100px"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:layout_width="700px"
-            android:layout_height="150px"
-            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="300px"
             android:background="@drawable/btn_round"
-            android:text="길 찾기"
-            android:textSize="75px"
-            android:textColor="#000000"
+            android:layout_marginBottom="50px"
+            android:text="진료과 길 찾기"
+            android:textSize="100px"
+            android:textColor="#FFEB3B"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:layout_width="700px"
-            android:layout_height="150px"
-            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="300px"
             android:background="@drawable/btn_round"
-            android:text="도착 확인"
-            android:textSize="75px"
-            android:textColor="#000000"
+            android:layout_marginBottom="50px"
+            android:text="진료과 도착 확인"
+            android:textSize="100px"
+            android:textColor="#FFEB3B"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:layout_width="700px"
-            android:layout_height="150px"
-            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="300px"
             android:background="@drawable/btn_round"
-            android:text="접수 대기표"
-            android:textSize="75px"
-            android:textColor="#000000"
+            android:layout_marginBottom="50px"
+            android:text="대기 순서 확인"
+            android:textSize="100px"
+            android:textColor="#FFEB3B"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:layout_width="700px"
-            android:layout_height="150px"
-            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="300px"
             android:background="@drawable/btn_round"
-            android:text="진료 대기 순서"
-            android:textSize="75px"
-            android:textColor="#000000"
+            android:text="진료비 수납"
+            android:textSize="100px"
+            android:textColor="#FFEB3B"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:layout_width="700px"
-            android:layout_height="150px"
-            android:layout_marginBottom="20dp"
-            android:background="@drawable/btn_round"
-            android:text="수납"
-            android:textSize="75px"
-            android:textColor="#000000"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:layout_width="800px"
-            android:layout_height="wrap_content"
-            android:text="신경외과, 김신경 의사 2022년 4월 13일 오후 5시 정각으로 예약있습니다.(1일 전/1시간 전/10분 전 알림)"
-            android:textAlignment="center"
-            android:textColor="#000000"
-            android:textSize="50px" />
 
     </LinearLayout>
 
