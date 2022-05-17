@@ -16,12 +16,12 @@
 
         <Button
             android:layout_width="match_parent"
-            android:layout_height="300px"
+            android:layout_height="280px"
             android:background="@drawable/btn_round"
             android:layout_marginBottom="50px"
             android:text="진료 예약"
             android:textColor="#FFEB3B"
-            android:textSize="100px"
+            android:textSize="90px"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -29,11 +29,11 @@
 
         <Button
             android:layout_width="match_parent"
-            android:layout_height="300px"
+            android:layout_height="280px"
             android:background="@drawable/btn_round"
             android:layout_marginBottom="50px"
             android:text="진료과 길 찾기"
-            android:textSize="100px"
+            android:textSize="90px"
             android:textColor="#FFEB3B"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -42,11 +42,11 @@
 
         <Button
             android:layout_width="match_parent"
-            android:layout_height="300px"
+            android:layout_height="280px"
             android:background="@drawable/btn_round"
             android:layout_marginBottom="50px"
             android:text="진료과 도착 확인"
-            android:textSize="100px"
+            android:textSize="90px"
             android:textColor="#FFEB3B"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -55,11 +55,11 @@
 
         <Button
             android:layout_width="match_parent"
-            android:layout_height="300px"
+            android:layout_height="280px"
             android:background="@drawable/btn_round"
             android:layout_marginBottom="50px"
             android:text="대기 순서 확인"
-            android:textSize="100px"
+            android:textSize="90px"
             android:textColor="#FFEB3B"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -68,10 +68,10 @@
 
         <Button
             android:layout_width="match_parent"
-            android:layout_height="300px"
+            android:layout_height="280px"
             android:background="@drawable/btn_round"
             android:text="진료비 수납"
-            android:textSize="100px"
+            android:textSize="90px"
             android:textColor="#FFEB3B"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
