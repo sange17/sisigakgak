@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Notice Text -->
+    <TextView
+        android:id="@+id/notice_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="안내 음성이 끝난 후 주민등록번호를 말씀해주세요."
+        android:textSize="60px"
+        android:padding="50px"
+        android:textColor="#FFFFFF"
+        android:drawableStart="@drawable/ic_notice"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/btn_round"
+        android:layout_gravity="top"/>
+
+    <!-- Name Text -->
+    <TextView
+        android:id="@+id/text_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="50px"
+        android:background="@drawable/txt_border"
+        android:paddingBottom="50px"
+        android:text="주민등록번호"
+        android:textColor="#FFFFFF"
+        android:textSize="60px" />
+
+<!--    &lt;!&ndash; Name STT Button &ndash;&gt;-->
+<!--    <Button-->
+<!--        android:id="@+id/input_name"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="STT START"-->
+<!--        android:textSize="60px"-->
+<!--        android:textColor="#FFFFFF"-->
+<!--        android:layout_margin="50px"-->
+<!--        android:padding="50px"-->
+<!--        android:background="@drawable/btn_round"-->
+<!--        android:layout_gravity="center"/>-->
+
+    <!-- Next Button -->
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="300px"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50px"
+        android:background="@drawable/btn_round"
+        android:text="다음으로"
+        android:textColor="#FFFFFF"
+        android:textSize="90px"
+        android:layout_gravity="bottom" />
+
+</FrameLayout>

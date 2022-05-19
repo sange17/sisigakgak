@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity2">
+    tools:context=".LoginActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -14,30 +14,26 @@
         android:orientation="vertical"
         android:gravity="center">
 
+        <!-- Title Bar -->
         <TextView
+            android:id="@+id/text_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="회원가입"
-            android:textSize="150px"
+            android:text="로그인"
+            android:textSize="90px"
             android:textColor="#FFEB3B"
             android:layout_marginBottom="100px"
             android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            />
+            android:layout_centerHorizontal="true"/>
 
-        <Button
+        <FrameLayout
+            android:id="@+id/frame"
             android:layout_width="match_parent"
-            android:layout_height="300px"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="50px"
-            android:background="@drawable/btn_round"
-            android:text="다음으로"
-            android:textColor="#FFEB3B"
-            android:textSize="100px"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_height="match_parent"
+            android:layout_below="@id/text_login">
+
+
+        </FrameLayout>
 
     </RelativeLayout>
 
