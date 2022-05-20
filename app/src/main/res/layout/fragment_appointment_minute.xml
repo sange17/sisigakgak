@@ -33,7 +33,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="50px"
         android:background="@drawable/btn_round"
-        android:text="다음으로"
+        android:text="메인으로 가기"
         android:textColor="#FFFFFF"
         android:textSize="90px"
         android:layout_gravity="bottom"/>
