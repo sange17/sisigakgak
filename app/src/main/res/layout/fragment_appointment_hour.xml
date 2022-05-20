@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Notice Text -->
+    <TextView
+        android:id="@+id/notice_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="예약 가능한 시간은 오전 9시부터 오후 5시까지 입니다. 화면을 위아래로 스크롤하여 가능한 시간을 선택해주세요."
+        android:textSize="60px"
+        android:padding="50px"
+        android:textColor="#FFFFFF"
+        android:drawableStart="@drawable/ic_notice"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/btn_round"
+        android:layout_gravity="top"/>
+
+    <!-- 진료과 스피너 -->
+    <NumberPicker
+        android:id="@+id/number_picker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:theme="@style/NumberPickerStyle"/>
+
+    <!-- Next Button -->
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="300px"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50px"
+        android:background="@drawable/btn_round"
+        android:text="다음으로"
+        android:textColor="#FFFFFF"
+        android:textSize="90px"
+        android:layout_gravity="bottom"/>
+
+</FrameLayout>

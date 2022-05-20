@@ -12,10 +12,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button bookBtn = (Button) findViewById(R.id.book);
-        bookBtn.setOnClickListener(new View.OnClickListener() {
+        Button appointmentBtn = (Button) findViewById(R.id.appointment);
+        appointmentBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, AppointmentActivity.class);
+                startActivity(intent);
             }
         });
 

@@ -13,4 +13,11 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="NumberPickerStyle">
+        <!-- 글자 크기 -->
+        <item name="android:textSize">90px</item>
+        <!-- 색상 변경 -->
+        <item name="android:textColorPrimary">#FFFFFF</item>
+    </style>
 </resources>

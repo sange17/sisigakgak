@@ -15,7 +15,7 @@
         android:gravity="center">
 
         <Button
-            android:id="@+id/book"
+            android:id="@+id/appointment"
             android:layout_width="match_parent"
             android:layout_height="280px"
             android:background="@drawable/btn_round"
