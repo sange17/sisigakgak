@@ -36,8 +36,8 @@ public class FragmentAppointmentHour extends Fragment {
         // 휠뷰 스피너
         picker = view.findViewById(R.id.number_picker);
         // 시 목록
-        picker.setMinValue(0);
-        picker.setMaxValue(23);
+        picker.setMinValue(9);
+        picker.setMaxValue(17);
 
         return view;
     }

@@ -36,8 +36,9 @@ public class FragmentAppointmentMonth extends Fragment {
         // 휠뷰 스피너
         picker = view.findViewById(R.id.number_picker);
         // 월 목록
-        picker.setMinValue(4);
-        picker.setMaxValue(6);
+        picker.setMinValue(4); // 처음 값
+        picker.setMaxValue(6); // 마지막 값
+        picker.setWrapSelectorWheel(false); // 휠 순환 제한
 
         return view;
     }
