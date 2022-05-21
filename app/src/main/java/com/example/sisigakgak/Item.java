@@ -15,6 +15,7 @@ public class Item {
     private int mMinute;
 
 
+    // setData
     public void setName(String name){ mName = name; }
     public void setBirth(String birth){ mBirth = birth; }
     public void setPhone(String phone){ mPhone = phone; }
@@ -27,6 +28,7 @@ public class Item {
     public void setHour(int hour){ mHour = hour;}
     public void setMinute(int minute){ mMinute = minute; }
 
+    // getData
     public String getName(){ return mName; }
     public String getBirth(){ return mBirth; }
     public String getPhone(){ return mPhone; }
