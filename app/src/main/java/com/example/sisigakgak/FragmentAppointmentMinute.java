@@ -42,21 +42,17 @@ public class FragmentAppointmentMinute extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        // 값 전달할 모델 생성
-        model = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
 
         // 다음으로 버튼
         nextBtn = view.findViewById(R.id.btn_next);
         nextBtn.setOnClickListener(e -> {
+            // 값 전달할 모델 생성
+            model = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
             // 다음 프래그먼트(화면)으로 값 전달
-            Item inputItem = new Item();
-            inputItem.setMinute(picker.getValue());
-            model.select(inputItem);
-//            Toast.makeText(getActivity(), inputItem.getMinute(), Toast.LENGTH_LONG).show();
+            model.setMinute(picker.getValue());
 
-            // 다음 화면(메인 화면 Activity) 띄우기
-            Intent intent = new Intent(getActivity(), MainActivity.class);
-            startActivity(intent);
+            // 다음 화면(프래그먼트) 띄우기
+            ((AppointmentActivity)getActivity()).change_fragment(FragmentAppointmentCheck.newInstance());
         });
     }
 }

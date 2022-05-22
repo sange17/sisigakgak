@@ -33,17 +33,15 @@ public class FragmentLoginPhone extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        // 값 전달할 모델 생성
-        model = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
         // 음성 인식 - 전화번호
         inputPhone = view.findViewById(R.id.text_name);
         // 다음으로 버튼
         nextBtn = view.findViewById(R.id.btn_next);
         nextBtn.setOnClickListener(item -> {
+            // 값 전달할 모델 생성
+            model = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
             // 다음 프래그먼트(화면)으로 값 전달
-            Item inputItem = new Item();
-            inputItem.setPhone(inputPhone.getText().toString());
-            model.select(inputItem);
+            model.setPhone(inputPhone.getText());
 
             // 다음 화면(프래그먼트) 띄우기
             Intent intent = new Intent(getActivity(), MainActivity.class);
