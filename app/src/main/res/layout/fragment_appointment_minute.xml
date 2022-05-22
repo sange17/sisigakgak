@@ -12,7 +12,7 @@
         android:textSize="60px"
         android:padding="50px"
         android:textColor="#FFFFFF"
-        android:drawableStart="@drawable/ic_notice"
+        android:drawableStart="@drawable/ic_notice_small"
         android:layout_centerHorizontal="true"
         android:background="@drawable/btn_round"
         android:layout_gravity="top"/>
