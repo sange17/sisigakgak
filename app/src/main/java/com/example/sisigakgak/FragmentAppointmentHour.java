@@ -34,6 +34,7 @@ public class FragmentAppointmentHour extends Fragment {
         picker.setMinValue(9); // 처음 값
         picker.setMaxValue(17); // 마지막 값
         picker.setWrapSelectorWheel(false); // 휠 순환 제한
+        picker.setDescendantFocusability(picker.FOCUS_BLOCK_DESCENDANTS); // 텍스트 편집 비활성화
 
         return view;
     }

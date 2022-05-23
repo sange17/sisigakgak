@@ -56,6 +56,7 @@ public class FragmentAppointmentDay extends Fragment {
                 picker.setMaxValue(30);
             }
             picker.setWrapSelectorWheel(false); // 휠 순환 제한
+            picker.setDescendantFocusability(picker.FOCUS_BLOCK_DESCENDANTS); // 텍스트 편집 비활성화
 
         });
 

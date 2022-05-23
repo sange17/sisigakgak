@@ -44,6 +44,7 @@ public class FragmentAppointmentDoctor extends Fragment {
             picker.setMaxValue(doctors.length-1); // 마지막 값 index
             picker.setDisplayedValues(doctors); // index에 해당하는 배열 값
             picker.setWrapSelectorWheel(false); // 휠 순환 제한
+            picker.setDescendantFocusability(picker.FOCUS_BLOCK_DESCENDANTS); // 텍스트 편집 비활성화
 
         });
 
