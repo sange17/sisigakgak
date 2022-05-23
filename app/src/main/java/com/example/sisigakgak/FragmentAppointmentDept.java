@@ -1,22 +1,30 @@
 package com.example.sisigakgak;
 
 import android.os.Bundle;
+import android.os.CountDownTimer;
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.NumberPicker;
+import android.widget.Toast;
+import android.os.CountDownTimer;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import java.util.Date;
+
 public class FragmentAppointmentDept extends Fragment {
     private SharedViewModel model;
 
     private Button nextBtn;
     private NumberPicker picker;
+    private DatePicker dPicker;
 
     // 각 Fragment마다 Instance 반환
     public static FragmentAppointmentDept newInstance(){
@@ -37,7 +45,19 @@ public class FragmentAppointmentDept extends Fragment {
         picker.setMaxValue(data.length-1); // 마지막 값 index
         picker.setDisplayedValues(data); // index에 해당하는 배열 값
         picker.setWrapSelectorWheel(false); // 휠 순환 제한
-        picker.setDescendantFocusability(picker.FOCUS_BLOCK_DESCENDANTS); // 텍스트 편집 비활성화
+        picker.setDescendantFocusability(picker.FOCUS_BLOCK_DESCENDANTS); // 텍스트 편집 비활성
+
+        // 스크롤 선택 값 읽어주기
+        picker.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
+            @Override
+            public void onValueChange(NumberPicker numberPicker, int oldVal, int newVal) {
+                // Toast 시간 조정
+                final Toast toast = Toast.makeText(getActivity(),data[newVal], Toast.LENGTH_SHORT);
+                toast.show();
+                Handler handler = new Handler();
+                handler.postDelayed(toast::cancel, 500);
+            }
+        });
 
         return view;
     }
