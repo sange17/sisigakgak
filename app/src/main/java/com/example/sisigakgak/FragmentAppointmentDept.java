@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.NumberPicker;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.os.CountDownTimer;
 
@@ -21,10 +22,13 @@ import java.util.Date;
 
 public class FragmentAppointmentDept extends Fragment {
     private SharedViewModel model;
-
-    private Button nextBtn;
-    private NumberPicker picker;
-    private DatePicker dPicker;
+    private TextView notice;
+    private Button dept1;
+    private Button dept2;
+    private Button dept3;
+    private Button dept4;
+    private Button dept5;
+    private Button dept6;
 
     // 각 Fragment마다 Instance 반환
     public static FragmentAppointmentDept newInstance(){
@@ -37,28 +41,6 @@ public class FragmentAppointmentDept extends Fragment {
         // Fragment로 불러올 xml 파일을 view로 가져옴.
         View view = inflater.inflate(R.layout.fragment_appointment_dept, null);
 
-        // 휠뷰 피커
-        picker = view.findViewById(R.id.number_picker);
-        // 진료과 목록
-        String[] data = new String[]{"재활의학과", "신경외과", "신경과"};
-        picker.setMinValue(0); // 처음 값 index
-        picker.setMaxValue(data.length-1); // 마지막 값 index
-        picker.setDisplayedValues(data); // index에 해당하는 배열 값
-        picker.setWrapSelectorWheel(false); // 휠 순환 제한
-        picker.setDescendantFocusability(picker.FOCUS_BLOCK_DESCENDANTS); // 텍스트 편집 비활성
-
-        // 스크롤 선택 값 읽어주기
-        picker.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
-            @Override
-            public void onValueChange(NumberPicker numberPicker, int oldVal, int newVal) {
-                // Toast 시간 조정
-                final Toast toast = Toast.makeText(getActivity(),data[newVal], Toast.LENGTH_SHORT);
-                toast.show();
-                Handler handler = new Handler();
-                handler.postDelayed(toast::cancel, 500);
-            }
-        });
-
         return view;
     }
 
@@ -66,14 +48,50 @@ public class FragmentAppointmentDept extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        // 다음으로 버튼
-        nextBtn = view.findViewById(R.id.btn_next);
-        nextBtn.setOnClickListener(item -> {
-            // 값 전달할 모델 생성
-            model = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
-            // 다음 프래그먼트(화면)으로 값 전달
-            model.setDept(picker.getDisplayedValues()[picker.getValue()]);
+        // 값 전달할 모델 생성
+        model = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
+        // 진료과 버튼
+        dept1 = view.findViewById(R.id.btn_dept1); // 재활의학과
+        dept2 = view.findViewById(R.id.btn_dept2); // 신경외과
+        dept3 = view.findViewById(R.id.btn_dept3); // 신경과
+        dept4 = view.findViewById(R.id.btn_dept4); // 소아청소년과
+        dept5 = view.findViewById(R.id.btn_dept5); // 영상의학과
+        dept6 = view.findViewById(R.id.btn_dept6); // 정형외과
 
+
+        dept1.setOnClickListener(item -> {
+            // 다음 프래그먼트(화면)으로 값 전달
+            model.setDept(dept1.getText());
+            // 다음 화면(프래그먼트) 띄우기
+            ((AppointmentActivity)getActivity()).change_fragment(FragmentAppointmentDoctor.newInstance());
+        });
+        dept2.setOnClickListener(item -> {
+            // 다음 프래그먼트(화면)으로 값 전달
+            model.setDept(dept2.getText());
+            // 다음 화면(프래그먼트) 띄우기
+            ((AppointmentActivity)getActivity()).change_fragment(FragmentAppointmentDoctor.newInstance());
+        });
+        dept3.setOnClickListener(item -> {
+            // 다음 프래그먼트(화면)으로 값 전달
+            model.setDept(dept3.getText());
+            // 다음 화면(프래그먼트) 띄우기
+            ((AppointmentActivity)getActivity()).change_fragment(FragmentAppointmentDoctor.newInstance());
+        });
+        dept4.setOnClickListener(item -> {
+            // 다음 프래그먼트(화면)으로 값 전달
+            model.setDept(dept4.getText());
+            // 다음 화면(프래그먼트) 띄우기
+            ((AppointmentActivity)getActivity()).change_fragment(FragmentAppointmentDoctor.newInstance());
+        });
+        dept5.setOnClickListener(item -> {
+            // 다음 프래그먼트(화면)으로 값 전달
+            model.setDept(dept5.getText());
+            // 다음 화면(프래그먼트) 띄우기
+            ((AppointmentActivity)getActivity()).change_fragment(FragmentAppointmentDoctor.newInstance());
+        });
+        dept6.setOnClickListener(item -> {
+            // 다음 프래그먼트(화면)으로 값 전달
+            model.setDept(dept6.getText());
             // 다음 화면(프래그먼트) 띄우기
             ((AppointmentActivity)getActivity()).change_fragment(FragmentAppointmentDoctor.newInstance());
         });

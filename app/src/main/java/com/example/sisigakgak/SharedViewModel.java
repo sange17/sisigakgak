@@ -13,6 +13,7 @@ public class SharedViewModel extends ViewModel {
     // 진료 예약
     private final MutableLiveData<CharSequence> mDept = new MutableLiveData<>();
     private final MutableLiveData<CharSequence> mDoctor = new MutableLiveData<>();
+    private final MutableLiveData<Integer> mYear = new MutableLiveData<>();
     private final MutableLiveData<Integer> mMonth = new MutableLiveData<>();
     private final MutableLiveData<Integer> mDay = new MutableLiveData<>();
     private final MutableLiveData<Integer> mHour = new MutableLiveData<>();
@@ -27,6 +28,7 @@ public class SharedViewModel extends ViewModel {
     public void setDoctor(CharSequence doctor){
         mDoctor.setValue(doctor);
     }
+    public void setYear(Integer year){ mYear.setValue(year); }
     public void setMonth(Integer month){ mMonth.setValue(month); }
     public void setDay(Integer day){ mDay.setValue(day); }
     public void setHour(Integer hour){ mHour.setValue(hour);}
@@ -41,6 +43,9 @@ public class SharedViewModel extends ViewModel {
     }
     public LiveData<CharSequence> getDoctor(){
         return mDoctor;
+    }
+    public LiveData<Integer> getYear(){
+        return mYear;
     }
     public LiveData<Integer> getMonth(){
         return mMonth;

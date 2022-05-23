@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.NumberPicker;
 
 import androidx.annotation.NonNull;
@@ -17,6 +18,7 @@ import java.util.Date;
 
 public class FragmentAppointmentDay extends Fragment {
     private SharedViewModel model;
+    private LinearLayout dayLayout;
     Button nextBtn;
     NumberPicker picker;
 
@@ -31,51 +33,31 @@ public class FragmentAppointmentDay extends Fragment {
         // Fragment로 불러올 xml 파일을 view로 가져옴.
         View view = inflater.inflate(R.layout.fragment_appointment_day, null);
 
-        // 이전 화면에서 선택한 값(월) 받아오기
-        SharedViewModel model = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
-        model.getMonth().observe(getViewLifecycleOwner(), month -> {
+        // 일 버튼
+        dayLayout = view.findViewById(R.id.layout_day);
+        for(int i=1; i<=31; i++) {
+            Button btnDay = new Button(getContext());
+            btnDay.setText(i + "일");
+            btnDay.setBackgroundResource(R.drawable.btn_round);
+            btnDay.setHeight(250);
+            btnDay.setTextSize(35);
+            // Margin 추가
+            LinearLayout.LayoutParams param = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+            param.topMargin = Math.round(20 * getResources().getDisplayMetrics().density);
+            ;
+            btnDay.setLayoutParams(param);
 
-            // 휠뷰 스피너
-            picker = view.findViewById(R.id.number_picker);
-            // 일 목록
-            long now = System.currentTimeMillis(); // 현재 시간
-            Date mDate = new Date(now);
-            SimpleDateFormat simpleDate = new SimpleDateFormat("yyyy");
-            int year = Integer.parseInt(simpleDate.format(mDate));
+            dayLayout.addView(btnDay);
+            btnDay.setOnClickListener(e -> {
+                // 값 전달할 모델 생성
+                model = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
+                // 다음 프래그먼트(화면)으로 값 전달
+                model.setDay(Integer.parseInt(String.valueOf(btnDay.getText()).substring(0,btnDay.getText().length()-1)));
 
-            picker.setMinValue(1); // 처음 값
-            if((month<8 && month%2 != 0) || (month>8 && month%2 == 0)){
-                picker.setMaxValue(31); // 마지막 값
-            }else if(month == 2){ // 윤년 계산
-                if(year%4 == 0){
-                    picker.setMaxValue(29);
-                }else{
-                    picker.setMaxValue(28);
-                }
-            }else{
-                picker.setMaxValue(30);
-            }
-            picker.setWrapSelectorWheel(false); // 휠 순환 제한
-            picker.setDescendantFocusability(picker.FOCUS_BLOCK_DESCENDANTS); // 텍스트 편집 비활성화
-
-        });
-
+                // 다음 프래그먼트(화면) 띄우기
+                ((AppointmentActivity) getActivity()).change_fragment(FragmentAppointmentHour.newInstance());
+            });
+        }
         return view;
-    }
-
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-
-        // 다음으로 버튼
-        nextBtn = view.findViewById(R.id.btn_next);
-        nextBtn.setOnClickListener(e -> {
-            // 값 전달할 모델 생성
-            model = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
-            // 다음 프래그먼트(화면)으로 값 전달
-            model.setDay(picker.getValue());
-
-            // 다음 프래그먼트(화면) 띄우기
-            ((AppointmentActivity)getActivity()).change_fragment(FragmentAppointmentHour.newInstance());
-        });
     }
 }
