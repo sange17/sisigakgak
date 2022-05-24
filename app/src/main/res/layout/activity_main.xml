@@ -71,6 +71,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
+            android:id="@+id/payment"
             android:layout_width="match_parent"
             android:layout_height="280px"
             android:background="@drawable/btn_round"

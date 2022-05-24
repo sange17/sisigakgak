@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/btn_round"
+        android:padding="50px"
+        android:layout_marginTop="50px">
+        <!-- Total Amount -->
+        <TextView
+            android:id="@+id/total_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="납부할 총 금액\n15,000원"
+            android:textSize="90px"
+            android:padding="50px"
+            android:textColor="#FFFFFF"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/txt_border_gray"
+            android:lineSpacingExtra="30px"/>
+        <!-- Detail Amount -->
+        <TextView
+            android:id="@+id/detail_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="피부과 진료비\n7,500원\n\n신경외과 진료비\n7,500원"
+            android:textSize="60px"
+            android:padding="50px"
+            android:textColor="#FFFFFF"
+            android:layout_centerHorizontal="true"
+            android:lineSpacingExtra="20px"/>
+    </LinearLayout>
+
+    <!-- Next Button -->
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="300px"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50px"
+        android:background="@drawable/btn_round"
+        android:text="수납하기"
+        android:textColor="#FFFFFF"
+        android:textSize="90px"
+        android:layout_gravity="bottom"/>
+
+</FrameLayout>
