@@ -31,5 +31,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        // 도착 확인
+        Button arrivalBtn = (Button) findViewById(R.id.arrival);
+        arrivalBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ArrivalActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- Notice Text -->
+    <TextView
+        android:id="@+id/appointment_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="신경외과에 도착했습니다.\n화면 하단에 있는 도착 확인 버튼을 눌러주세요."
+        android:textSize="60px"
+        android:padding="50px"
+        android:textColor="#FFFFFF"
+        android:drawableTop="@drawable/ic_notice_large"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"/>
+
+
+    <!-- Next Button -->
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="300px"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50px"
+        android:background="@drawable/btn_round"
+        android:text="도착 확인"
+        android:textColor="#FFFFFF"
+        android:textSize="90px"
+        android:layout_gravity="bottom"/>
+</FrameLayout>
