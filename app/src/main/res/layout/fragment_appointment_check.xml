@@ -9,12 +9,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="선택하신 예약 정보입니다."
-        android:textSize="60px"
-        android:padding="50px"
+        android:textSize="90px"
         android:textColor="#FFFFFF"
         android:drawableTop="@drawable/ic_notice_large"
         android:layout_centerHorizontal="true"
-        android:textAlignment="center"/>
+        android:textAlignment="center"
+        android:layout_marginTop="100dp"/>
 
 
     <!-- Next Button -->

@@ -4,16 +4,16 @@
     android:layout_height="match_parent">
     <!-- Notice Text -->
     <TextView
-        android:id="@+id/notice_box"
+        android:id="@+id/title_directions"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="진료과 안내중"
-        android:textSize="60px"
-        android:padding="50px"
-        android:textColor="#FFFFFF"
-        android:drawableStart="@drawable/ic_notice_small"
+        android:textSize="90px"
+        android:textColor="#FFEB3B"
+        android:layout_marginTop="100px"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="50px"/>
+        android:textAlignment="center"/>
 
     <!-- Next Button -->
     <Button

@@ -7,13 +7,13 @@
         android:id="@+id/appointment_info"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="도착 확인되었습니다.\n화면 하단에 있는 진료 순서 확인 버튼을 눌러주세요."
-        android:textSize="60px"
-        android:padding="50px"
+        android:text="도착 확인되었습니다.\n화면 하단에 있는\n진료 순서 확인 버튼을 \n눌러주세요."
+        android:textSize="90px"
         android:textColor="#FFFFFF"
         android:drawableTop="@drawable/ic_notice_large"
         android:layout_centerHorizontal="true"
-        android:textAlignment="center"/>
+        android:textAlignment="center"
+        android:layout_marginTop="100dp"/>
 
 
     <!-- Next Button -->
