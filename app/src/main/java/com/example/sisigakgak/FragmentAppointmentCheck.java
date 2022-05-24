@@ -48,7 +48,7 @@ public class FragmentAppointmentCheck extends Fragment {
             appointmentCheck.setText(appointmentCheck.getText()+month.toString()+"월 ");
         });
         model.getDay().observe(getViewLifecycleOwner(), day -> {
-            appointmentCheck.setText(appointmentCheck.getText()+day.toString()+"일 ");
+            appointmentCheck.setText(appointmentCheck.getText()+day.toString()+"일\n");
         });
         model.getHour().observe(getViewLifecycleOwner(), hour -> {
             appointmentCheck.setText(appointmentCheck.getText()+hour.toString()+"시 ");

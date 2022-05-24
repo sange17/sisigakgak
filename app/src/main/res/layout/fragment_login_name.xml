@@ -17,10 +17,11 @@
         android:background="@drawable/btn_round"
         android:layout_gravity="top"/>
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center">
+        android:layout_gravity="center"
+        android:orientation="vertical">
 
         <!-- Name Text -->
         <TextView
@@ -39,15 +40,13 @@
             android:id="@+id/input_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="STT START"
+            android:text="음성 인식 시작"
             android:textSize="60px"
             android:textColor="#FFFFFF"
             android:layout_margin="50px"
             android:padding="50px"
-            android:background="@drawable/btn_round"
-            android:layout_below="@id/text_name"/>
-
-    </RelativeLayout>
+            android:background="@drawable/btn_round"/>
+    </LinearLayout>
 
 
     <!-- Next Button -->

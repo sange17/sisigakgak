@@ -17,31 +17,36 @@
         android:background="@drawable/btn_round"
         android:layout_gravity="top"/>
 
-    <!-- Name Text -->
-    <TextView
-        android:id="@+id/text_name"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="50px"
-        android:background="@drawable/txt_border"
-        android:paddingBottom="50px"
-        android:text="주민등록번호"
-        android:textColor="#FFFFFF"
-        android:textSize="60px" />
+        android:orientation="vertical"
+        android:layout_gravity="center">
+        <!-- Birth Text -->
+        <TextView
+            android:id="@+id/text_birth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="50px"
+            android:background="@drawable/txt_border"
+            android:paddingBottom="50px"
+            android:text="주민등록번호"
+            android:textColor="#FFFFFF"
+            android:textSize="60px" />
 
-<!--    &lt;!&ndash; Name STT Button &ndash;&gt;-->
-<!--    <Button-->
-<!--        android:id="@+id/input_name"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="STT START"-->
-<!--        android:textSize="60px"-->
-<!--        android:textColor="#FFFFFF"-->
-<!--        android:layout_margin="50px"-->
-<!--        android:padding="50px"-->
-<!--        android:background="@drawable/btn_round"-->
-<!--        android:layout_gravity="center"/>-->
+        <!-- Name STT Button -->
+        <Button
+            android:id="@+id/input_birth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="음성 인식 시작"
+            android:textSize="60px"
+            android:textColor="#FFFFFF"
+            android:layout_margin="50px"
+            android:padding="50px"
+            android:background="@drawable/btn_round"/>
+    </LinearLayout>
 
     <!-- Next Button -->
     <Button

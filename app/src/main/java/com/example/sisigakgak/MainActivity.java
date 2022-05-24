@@ -32,26 +32,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // 도착 확인
-        Button arrivalBtn = (Button) findViewById(R.id.arrival);
-        arrivalBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ArrivalActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        // 대기 순번 확인
-        Button waitingBtn = (Button) findViewById(R.id.waiting);
-        waitingBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, WaitingActivity.class);
-                startActivity(intent);
-            }
-        });
-
         // 진료비 수납
         Button paymentBtn = (Button) findViewById(R.id.payment);
         paymentBtn.setOnClickListener(new View.OnClickListener() {

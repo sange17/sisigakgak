@@ -4,10 +4,10 @@
     android:layout_height="match_parent">
     <!-- Notice Text -->
     <TextView
-        android:id="@+id/appointment_info"
+        android:id="@+id/arrival_info"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="신경외과에 도착했습니다.\n화면 하단에 있는 도착 \n확인 버튼을 눌러주세요."
+        android:text="에 도착했습니다.\n화면 하단에 있는 도착 \n확인 버튼을 눌러주세요."
         android:textSize="90px"
         android:textColor="#FFFFFF"
         android:drawableTop="@drawable/ic_notice_large"

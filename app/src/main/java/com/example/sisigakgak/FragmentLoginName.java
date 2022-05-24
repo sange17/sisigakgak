@@ -26,7 +26,7 @@ import java.util.ArrayList;
 public class FragmentLoginName extends Fragment {
     private SharedViewModel model;
     Button nextBtn;
-    TextView inputName;
+    TextView textName;
     Button inputBtn;
     Intent intent;
     SpeechRecognizer mRecognizer;
@@ -51,7 +51,7 @@ public class FragmentLoginName extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         // 음성 인식 - 이름
-        inputName = view.findViewById(R.id.text_name);
+        textName = view.findViewById(R.id.text_name);
 
         // 안드로이드 6.0버전 이상인지 체크해서 퍼미션 체크
         if(Build.VERSION.SDK_INT >= 23){
@@ -134,7 +134,7 @@ public class FragmentLoginName extends Fragment {
                         results.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION);
 
                 for(int i = 0; i < matches.size() ; i++){
-                    inputName.setText(matches.get(i));
+                    textName.setText(matches.get(i));
                 }
             }
 
@@ -171,7 +171,7 @@ public class FragmentLoginName extends Fragment {
             // 값 전달할 모델 생성
             model = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
             // 다음 프래그먼트(화면)으로 값 전달
-            model.setName(inputName.getText());
+            model.setName(textName.getText());
 
             // 다음 화면(프래그먼트) 띄우기
             ((LoginActivity)getActivity()).change_fragment(FragmentLoginBirth.newInstance());
