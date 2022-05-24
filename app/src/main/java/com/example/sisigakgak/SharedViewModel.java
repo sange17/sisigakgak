@@ -19,6 +19,10 @@ public class SharedViewModel extends ViewModel {
     private final MutableLiveData<Integer> mHour = new MutableLiveData<>();
     private final MutableLiveData<Integer> mMinute = new MutableLiveData<>();
 
+    // 길 안내
+    private final MutableLiveData<CharSequence> mDirectionsDept = new MutableLiveData<>();
+
+
 
     // setData
     public void setName(CharSequence name){ mName.setValue(name); }
@@ -33,6 +37,7 @@ public class SharedViewModel extends ViewModel {
     public void setDay(Integer day){ mDay.setValue(day); }
     public void setHour(Integer hour){ mHour.setValue(hour);}
     public void setMinute(Integer minute){ mMinute.setValue(minute); }
+    public void setDirectionsDept(CharSequence directionsdept){ mDirectionsDept.setValue(directionsdept); }
 
     // getData
     public LiveData<CharSequence> getName(){ return mName; }
@@ -58,5 +63,8 @@ public class SharedViewModel extends ViewModel {
     }
     public LiveData<Integer> getMinute(){
         return mMinute;
+    }
+    public LiveData<CharSequence> getDirectionsDept(){
+        return mDirectionsDept;
     }
 }

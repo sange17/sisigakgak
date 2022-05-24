@@ -29,6 +29,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
+            android:id="@+id/directions"
             android:layout_width="match_parent"
             android:layout_height="280px"
             android:background="@drawable/btn_round"

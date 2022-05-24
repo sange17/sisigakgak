@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!-- Notice Text -->
+            <TextView
+                android:id="@+id/notice_box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="화면을 위아래로 스크롤하여 진료과를 선택해주세요."
+                android:textSize="60px"
+                android:padding="50px"
+                android:textColor="#FFFFFF"
+                android:drawableStart="@drawable/ic_notice_small"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="50px"/>
+
+            <!-- 진료과 버튼 -->
+            <Button
+                android:id="@+id/btn_dept1"
+                android:layout_width="match_parent"
+                android:layout_height="250px"
+                android:layout_marginBottom="50px"
+                android:background="@drawable/btn_round"
+                android:text="재활의학과"
+                android:textColor="#FFFFFF"
+                android:textSize="90px"/>
+
+            <Button
+                android:id="@+id/btn_dept2"
+                android:layout_width="match_parent"
+                android:layout_height="250px"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="50px"
+                android:background="@drawable/btn_round"
+                android:text="신경외과"
+                android:textColor="#FFFFFF"
+                android:textSize="90px"/>
+
+            <Button
+                android:id="@+id/btn_dept3"
+                android:layout_width="match_parent"
+                android:layout_height="250px"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="50px"
+                android:background="@drawable/btn_round"
+                android:text="신경과"
+                android:textColor="#FFFFFF"
+                android:textSize="90px"/>
+
+            <Button
+                android:id="@+id/btn_dept4"
+                android:layout_width="match_parent"
+                android:layout_height="250px"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="50px"
+                android:background="@drawable/btn_round"
+                android:text="소아청소년과"
+                android:textColor="#FFFFFF"
+                android:textSize="90px"/>
+
+            <Button
+                android:id="@+id/btn_dept5"
+                android:layout_width="match_parent"
+                android:layout_height="250px"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="50px"
+                android:background="@drawable/btn_round"
+                android:text="영상의학과"
+                android:textColor="#FFFFFF"
+                android:textSize="90px"/>
+
+            <Button
+                android:id="@+id/btn_dept6"
+                android:layout_width="match_parent"
+                android:layout_height="250px"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="50px"
+                android:background="@drawable/btn_round"
+                android:text="정형외과"
+                android:textColor="#FFFFFF"
+                android:textSize="90px"/>
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

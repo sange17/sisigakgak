@@ -11,6 +11,7 @@
         <entry key="..\:/Users/iykim/Desktop/sisigakgak/app/src/main/res/drawable/ic_notice_small.xml" value="0.1985" />
         <entry key="..\:/Users/iykim/Desktop/sisigakgak/app/src/main/res/drawable/txt_border.xml" value="0.166" />
         <entry key="..\:/Users/iykim/Desktop/sisigakgak/app/src/main/res/layout/activity_appointment.xml" value="0.25885416666666666" />
+        <entry key="..\:/Users/iykim/Desktop/sisigakgak/app/src/main/res/layout/activity_directions.xml" value="0.30231143552311435" />
         <entry key="..\:/Users/iykim/Desktop/sisigakgak/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/Users/iykim/Desktop/sisigakgak/app/src/main/res/layout/activity_main.xml" value="0.152" />
         <entry key="..\:/Users/iykim/Desktop/sisigakgak/app/src/main/res/layout/activity_main2.xml" value="0.2" />
@@ -21,6 +22,8 @@
         <entry key="..\:/Users/iykim/Desktop/sisigakgak/app/src/main/res/layout/fragment_appointment_hour.xml" value="0.1" />
         <entry key="..\:/Users/iykim/Desktop/sisigakgak/app/src/main/res/layout/fragment_appointment_minute.xml" value="0.17798913043478262" />
         <entry key="..\:/Users/iykim/Desktop/sisigakgak/app/src/main/res/layout/fragment_appointment_month.xml" value="0.17798913043478262" />
+        <entry key="..\:/Users/iykim/Desktop/sisigakgak/app/src/main/res/layout/fragment_directions_dept.xml" value="0.25885416666666666" />
+        <entry key="..\:/Users/iykim/Desktop/sisigakgak/app/src/main/res/layout/fragment_directions_view.xml" value="0.2578125" />
         <entry key="..\:/Users/iykim/Desktop/sisigakgak/app/src/main/res/layout/fragment_login_birth.xml" value="0.1" />
         <entry key="..\:/Users/iykim/Desktop/sisigakgak/app/src/main/res/layout/fragment_login_name.xml" value="0.24632352941176472" />
         <entry key="..\:/Users/iykim/Desktop/sisigakgak/app/src/main/res/layout/fragment_login_phone.xml" value="0.1" />
