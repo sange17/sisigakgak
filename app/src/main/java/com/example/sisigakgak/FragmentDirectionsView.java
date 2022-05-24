@@ -1,5 +1,6 @@
 package com.example.sisigakgak;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,6 +24,14 @@ public class FragmentDirectionsView extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         // Fragment로 불러올 xml 파일을 view로 가져옴.
         View view = inflater.inflate(R.layout.fragment_directions_view, null);
+
+        // 진료과 도착 완료
+        Button arrivalBtn = view.findViewById(R.id.btn_next);
+        arrivalBtn.setOnClickListener(e -> {
+            // 다음 화면(메인 화면 Activity) 띄우기
+            Intent intent = new Intent(getActivity(), ArrivalActivity.class);
+            startActivity(intent);
+        });
 
         return view;
     }

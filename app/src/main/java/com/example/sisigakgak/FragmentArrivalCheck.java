@@ -37,7 +37,7 @@ public class FragmentArrivalCheck extends Fragment {
         nextBtn = view.findViewById(R.id.btn_next);
         nextBtn.setOnClickListener(e -> {
             // 다음 화면(메인 화면 Activity) 띄우기
-            Intent intent = new Intent(getActivity(), MainActivity.class);
+            Intent intent = new Intent(getActivity(), WaitingActivity.class);
             startActivity(intent);
         });
     }

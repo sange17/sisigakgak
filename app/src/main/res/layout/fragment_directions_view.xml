@@ -14,4 +14,17 @@
         android:drawableStart="@drawable/ic_notice_small"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="50px"/>
+
+    <!-- Next Button -->
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="300px"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50px"
+        android:background="@drawable/btn_round"
+        android:text="안내 완료"
+        android:textColor="#FFFFFF"
+        android:textSize="90px"
+        android:layout_gravity="bottom"/>
 </FrameLayout>

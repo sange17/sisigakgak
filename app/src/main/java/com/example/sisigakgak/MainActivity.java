@@ -41,5 +41,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        // 대기 순번 확인
+        Button waitingBtn = (Button) findViewById(R.id.waiting);
+        waitingBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, WaitingActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

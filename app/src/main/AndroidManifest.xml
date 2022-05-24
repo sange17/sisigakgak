@@ -35,6 +35,10 @@
             android:name=".ArrivalActivity"
             android:exported="false">
         </activity>
+        <activity
+            android:name=".WaitingActivity"
+            android:exported="false">
+        </activity>
     </application>
 
     <!-- 인터넷, 오디오 사용 권한 추가(음성 인식 STT를 위함) -->
