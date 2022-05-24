@@ -42,6 +42,7 @@ public class FragmentDirectionsView extends Fragment {
                 intent.putExtra("dept", item);
                 startActivity(intent);
             });
+
         });
         return view;
     }

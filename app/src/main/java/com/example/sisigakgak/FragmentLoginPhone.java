@@ -4,6 +4,7 @@ import android.Manifest;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.speech.RecognitionListener;
 import android.speech.RecognizerIntent;
 import android.speech.SpeechRecognizer;
@@ -58,7 +59,6 @@ public class FragmentLoginPhone extends Fragment {
             @Override
             public void onReadyForSpeech(Bundle params) {
                 // 말하기 시작할 준비가되면 호출
-                Toast.makeText(getActivity(),"음성인식 시작",Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -132,6 +132,10 @@ public class FragmentLoginPhone extends Fragment {
                 for(int i = 0; i < matches.size() ; i++){
                     textPhone.setText(matches.get(i));
                 }
+                final Toast toast = Toast.makeText(getActivity(),textPhone.getText()+" 맞으신가요? 아니면 음성 인식 시작 버튼을 다시 눌러주세요.",Toast.LENGTH_SHORT);
+                toast.show();
+                Handler handler = new Handler();
+                handler.postDelayed(toast::cancel, 10);
             }
 
             @Override

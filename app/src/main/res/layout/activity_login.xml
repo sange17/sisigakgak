@@ -14,23 +14,10 @@
         android:orientation="vertical"
         android:gravity="center">
 
-        <!-- Title Bar -->
-        <TextView
-            android:id="@+id/text_login"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="로그인"
-            android:textSize="90px"
-            android:textColor="#FFEB3B"
-            android:layout_marginBottom="100px"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"/>
-
         <FrameLayout
             android:id="@+id/frame"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@id/text_login">
+            android:layout_height="match_parent">
 
 
         </FrameLayout>

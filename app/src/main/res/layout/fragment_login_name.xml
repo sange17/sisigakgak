@@ -8,7 +8,7 @@
         android:id="@+id/notice_box"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="안내 음성이 끝난 후 이름을 말씀해주세요."
+        android:text="로그인 화면입니다.\n음성 인식 시작 버튼을 눌러 이름을 말씀해주세요."
         android:textSize="60px"
         android:padding="50px"
         android:textColor="#FFFFFF"
